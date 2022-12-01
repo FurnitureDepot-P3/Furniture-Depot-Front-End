@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchForm from './SearchForm'
 
 export default function Home (props) {
     return (
@@ -6,6 +7,7 @@ export default function Home (props) {
 
             <div className="homeh1">
             <h1 className= 'title'> Furniture Depot(Home)</h1>
+            <SearchForm/>
             </div>
 
         <div className="catbtns">
