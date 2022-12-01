@@ -1,8 +1,12 @@
-/* .App {
-  text-align: center;
+.App {
+ background-color: blue;
 }
 
-.App-logo {
+
+.navbar {
+  color:purple;
+}
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
