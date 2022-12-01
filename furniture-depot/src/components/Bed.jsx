@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import React from "react";
 
 export default function Bed () {
 
@@ -17,7 +18,7 @@ const [bed, setBed] = useState(null)
         return (
             <div className="container">
             <div className="bedfurn">
-
+                bed
 
             </div>    
             </div>
