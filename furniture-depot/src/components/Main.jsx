@@ -5,6 +5,7 @@ import Dining from './Dining'
 import Living from './Living'
 import Bed from './Bed'
 import Outside from './Outside'
+import Nav from './Nav'
 
 
 export default function Main () {
@@ -15,6 +16,7 @@ export default function Main () {
         </div>
 
         <div>
+            <Nav />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path ="/Dining" element={<Dining />} />
