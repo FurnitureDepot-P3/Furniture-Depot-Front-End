@@ -11,9 +11,6 @@ import Nav from './Nav'
 export default function Main () {
     return (
     <div>
-        <div>
-            <h2>This is main</h2>
-        </div>
 
         <div>
             <Routes>
