@@ -1,0 +1,30 @@
+.App {
+ text-align: center;
+}
+
+
+.navbar {
+  color:purple;
+}
+
+.homecats {
+
+
+}
+
+.catbtns {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(200px,1fr));
+  grid-gap: 1em;
+  padding: 32px 100px;
+}
+
+/* padding is changing row size */
+.livingbtn {
+  padding: 32px 16px;
+}
+
+/* padding is changing row size */
+.bedbtn {
+  padding: 32px 16px;
+}
