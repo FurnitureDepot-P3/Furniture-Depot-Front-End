@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import React from "react";
 
 export default function Living () {
 
@@ -17,7 +18,7 @@ const [living, setLiving] = useState(null)
         return (
             <div className="container">
             <div className="lvrmfurn">
-
+                living
 
             </div>    
             </div>
