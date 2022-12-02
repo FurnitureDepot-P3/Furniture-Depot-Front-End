@@ -20,7 +20,7 @@ function Register() {
         e.preventDefault()
     }
 
-    await RegisterUser({
+      RegisterUser({
         name: formValues.name,
         email: formValues.email,
         password: formValues.password
