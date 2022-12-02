@@ -1,28 +1,39 @@
-// import { useState, useEffect } from "react"
-// import axios from 'axios'
-import React from "react";
+import { useState, useEffect } from "react"
+import axios from 'axios'
 
 export default function Living () {
 
-// const [living, setLiving] = useState(null)
-//     useEffect(() => {
-//         const getData = async () => {
-//             const response = await axios.get(`https://www.furniture.com`)
-//             setLiving(response.data.living)
-//         }
-//         getData()
-//     }, [])
-//     if (!living) {
-//         return <h2> LOADING PAGE </h2>
-//     } else {
+const [living, setLiving] = useState([])
+    useEffect(() => {
+        const getData = async () => {
+            const response = await axios.get(`http://localhost:3001/api/categories/2`)
+            setLiving(response.data.products)
+            console.log(response.data.products)
+        }
+        getData()
+    }, [])
+    if (!living) {
+        return <h2> LOADING PAGE! </h2>
+    } else {
         return (
-            <div className="container">
-            <div className="lvrmfurn">
-                living
+         <div className="container">
+            
+            <div className="lvrmfurn">  
+                {living.map((products) =>(
+                    <div className="box" key={products.name}>
+                        <h3 className="productline1"> {products.name}</h3>
+                        <h2>{products.description}</h2>
+                    </div>
+                ))}
 
             </div>    
-            </div>
+        
+        
+        
+        
+        
+        </div>
         )
-    // }    
+    }    
     
 }
