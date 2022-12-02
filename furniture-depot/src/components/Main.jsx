@@ -19,7 +19,7 @@ export default function Main () {
                 <Route path="/" element={<Home />} />
                 <Route path="/SearchForm" element={<SearchForm/>}/>
                 <Route path ="/Dining" element={<Dining />} />
-                <Route path="/Living" element={<Living />} />
+                <Route path="/categories/2" element={<Living />} />
                 <Route path="/Bed" element={<Bed />} />
                 <Route path="/Outside" element={<Outside />} />
             </Routes>

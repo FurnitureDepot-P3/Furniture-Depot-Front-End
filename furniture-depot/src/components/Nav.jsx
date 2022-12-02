@@ -9,7 +9,7 @@ export default function Nav () {
                 <Link to='/'>Home</Link>
                 </button>
                 <button id="livrom">
-                <Link to='/Living'>LIVING ROOM</Link> 
+                <Link to='/Categories/2'>LIVING ROOM</Link> 
                 </button>
                 <button id="dinrom">
                 <Link to='/Dining'>DINING ROOM</Link>
