@@ -14,7 +14,7 @@ export default function Nav () {
                 <Link to='/Dining'>DINING ROOM</Link>
                 </button>
                 <button id="bedrom">
-                <Link to='/Bed'>BEDROOM</Link>
+                <Link to='/Categories/1'>BEDROOM</Link>
                 </button>
                 <button id="outside">
                 <Link to='/Outside'>OUTSIDE FURNITURE</Link>

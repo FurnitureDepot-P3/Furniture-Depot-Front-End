@@ -3,11 +3,12 @@ import axios from 'axios'
 
 export default function Bed () {
 
-const [bed, setBed] = useState(null)
+const [bed, setBed] = useState([])
     useEffect(() => {
         const getData = async () => {
-            const response = await axios.get(`https://www.furniture.com`)
-            setBed(response.data.bed)
+            const response = await axios.get(`http://localhost:3001/api/categories/1`)
+            setBed(response.data.products)
+            console.log(response.data.products)
         }
         getData()
     }, [])
@@ -17,6 +18,12 @@ const [bed, setBed] = useState(null)
         return (
             <div className="container">
             <div className="bedfurn">
+            {bed.map((products) =>(
+                    <div className="box" key={products.name}>
+                        <h3 className="productline1"> {products.name}</h3>
+                        <h2>{products.description}</h2>
+                    </div>
+                ))}
 
 
             </div>    
