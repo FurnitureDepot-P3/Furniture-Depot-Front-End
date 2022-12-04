@@ -1,12 +1,12 @@
 import React from 'react'
-import Nav from './Nav'
+import SearchForm from "./SearchForm"
 
 
 export default function Header () {
     return (
-        <div>
-            <h2> Furniture header </h2>
-            < Nav />
+        <div id="containerhdr">
+            <h2 className="headertitle"> Furniture header </h2>
+            <h2 className="searchbox" > <SearchForm /> </h2>
         </div>
     )
 }

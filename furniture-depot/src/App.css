@@ -4,12 +4,28 @@
 
 
 .navbar {
-  color:purple;
+  color:purple; 
+}
+
+.links {
+  background-color: transparent;
 }
 
 .homecats {
+  
+}
 
+#containerhdr {
+  display: flex;
+  justify-content: space-around;
 
+}
+
+.headertitle {
+ padding-left: 0%;
+}
+
+.navhome {
 }
 
 .catbtns {
@@ -28,3 +44,9 @@
 .bedbtn {
   padding: 32px 16px;
 }
+
+/* title
+style="text-align:left;float:left;" */
+
+/* /*search
+style="text-align:right;float;right" */

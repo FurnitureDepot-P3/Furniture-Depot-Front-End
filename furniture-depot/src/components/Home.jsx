@@ -1,13 +1,13 @@
 import React from 'react'
 import SearchForm from './SearchForm'
+import Nav from './Nav'
 
 export default function Home (props) {
     return (
         <div className="homecats">
 
-            <div className="homeh1">
-            <h1 className= 'title'> Furniture Depot(Home)</h1>
-            <SearchForm/>
+            <div className="navhome">
+            < Nav />
             </div>
 
         <div className="catbtns">

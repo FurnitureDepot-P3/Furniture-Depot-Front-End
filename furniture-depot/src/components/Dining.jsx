@@ -1,6 +1,7 @@
 // import { useState, useEffect } from "react"
 // import axios from 'axios'
 import React from "react";
+import Nav from "./Nav"
 
 export default function Dining () {
 
@@ -17,6 +18,10 @@ export default function Dining () {
 //     } else {
         return (
             <div className="container">
+                <div className="navhome">
+            < Nav />
+            </div>
+
             <div className="dinefurn">
                 dinning
 
