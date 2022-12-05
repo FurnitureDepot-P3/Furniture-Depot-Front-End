@@ -26,7 +26,9 @@ const [outdoor, setOutdoor] = useState([])
                 {outdoor.map((products) =>(
                     <div className="box" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
-                        <h2>{products.description}</h2>
+                        <h3>${products.price}</h3>
+                        <h4>{products.description}</h4>
+                        <img src={products.image} />
                     </div>
                 ))}
 
