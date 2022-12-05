@@ -1,13 +1,15 @@
 import React from 'react'
-import SearchForm from './SearchForm'
+// import SearchForm from './SearchForm'
 import Nav from './Nav'
 import { Link } from 'react-router-dom'
+
 
 export default function Home (props) {
     return (
         <div className="homecats">
 
             <div className="navhome">
+
             < Nav />
             </div>
 
