@@ -36,7 +36,7 @@ export default function Main () {
         setUser(user)
         toggleAuthenticated(true)
     }
-        
+    
     return (
     <div>
 
