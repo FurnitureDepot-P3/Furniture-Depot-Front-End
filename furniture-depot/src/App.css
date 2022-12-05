@@ -21,10 +21,31 @@
 
 /* padding is changing row size */
 .livingbtn {
-  padding: 32px 16px;
+  color: aliceblue;
+  padding: 100px 16px;
+  background-image: url("https://images.unsplash.com/photo-1560449752-8b6023e2ab5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+  background-size: cover;
+  background-position: bottom;
 }
 
 /* padding is changing row size */
 .bedbtn {
-  padding: 32px 16px;
+  padding: 100px 16px;
+  background-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center;
 }
+
+.diningbtn {
+  color: aliceblue;
+  background-image: url("https://images.unsplash.com/photo-1642014162521-cfdb616ea6db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=769&q=80");
+  background-size: cover;
+  background-position: bottom;
+} 
+
+.outbtn {
+   background-image: url("https://images.unsplash.com/photo-1600210492090-a159ffa3aeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"); 
+   background-size: cover;
+   background-position: bottom;
+  }
+
