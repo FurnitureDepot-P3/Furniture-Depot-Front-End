@@ -52,6 +52,7 @@
   background-position: center;
 }
 
+
 .diningbtn {
   color: aliceblue;
   background-image: url("https://images.unsplash.com/photo-1642014162521-cfdb616ea6db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=769&q=80");
@@ -64,4 +65,11 @@
    background-size: cover;
    background-position: bottom;
   }
+
+
+/* title
+style="text-align:left;float:left;" */
+
+/* /*search
+style="text-align:right;float;right" */
 

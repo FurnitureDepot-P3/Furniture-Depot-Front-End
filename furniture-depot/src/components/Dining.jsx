@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-import Nav from './Nav'
+
+import React from "react";
+import Nav from "./Nav"
+
 
 export default function Dining () {
 
@@ -17,6 +20,7 @@ const [dining, setDining] = useState([])
         return <h2> LOADING PAGE! </h2>
     } else {
         return (
+
          <div className="container">
             <div className="navhome">
                 < Nav />
@@ -28,6 +32,7 @@ const [dining, setDining] = useState([])
                         <h2>{products.description}</h2>
                     </div>
                 ))}
+
 
             </div>            
         </div>
