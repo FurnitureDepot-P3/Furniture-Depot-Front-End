@@ -1,7 +1,5 @@
 import React from 'react'
-import Register from './Register'
 import SearchForm from "./SearchForm"
-import SignIn from './SignIn'
 import { Link } from "react-router-dom"
 
 export default function Header () {
