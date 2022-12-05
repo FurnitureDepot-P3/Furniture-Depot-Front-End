@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { SignInUser } from '../services/Auth'
+import Nav from './Nav'
 
 
 function SignIn(props) {
@@ -25,6 +26,9 @@ function SignIn(props) {
     
   return (
     <div className="signin col">
+      <div className="navhome">
+                < Nav />
+            </div>
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
