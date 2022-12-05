@@ -11,8 +11,7 @@ import SearchForm from "./SearchForm"
 import SignIn from './SignIn'
 import Register from './Register'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { SignInUser, RegisterUser, VerifyUser, RemoveToken, CheckSession } from '../services/Auth'
+import { CheckSession } from '../services/Auth'
 
 
 export default function Main () {
