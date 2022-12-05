@@ -5,6 +5,8 @@ import Nav from './Nav'
 
 
 export default function Living () {
+
+    
         
 const [living, setLiving] = useState([])
     useEffect(() => {
