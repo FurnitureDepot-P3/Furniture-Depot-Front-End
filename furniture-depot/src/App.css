@@ -52,24 +52,8 @@
   background-position: center;
 }
 
-<<<<<<< HEAD
 /* title
 style="text-align:left;float:left;" */
 
 /* /*search
 style="text-align:right;float;right" */
-=======
-.diningbtn {
-  color: aliceblue;
-  background-image: url("https://images.unsplash.com/photo-1642014162521-cfdb616ea6db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=769&q=80");
-  background-size: cover;
-  background-position: bottom;
-} 
-
-.outbtn {
-   background-image: url("https://images.unsplash.com/photo-1600210492090-a159ffa3aeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"); 
-   background-size: cover;
-   background-position: bottom;
-  }
-
->>>>>>> f7517b89c11d548d84f453b79d2cf617b5d84756
