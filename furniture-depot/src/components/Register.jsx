@@ -21,23 +21,6 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    await RegisterUser({
-      name: formValues.name,
-      email: formValues.email,
-      password: formValues.password
-    })
-
-    setFormValues({
-      name: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    })
-
-    navigate('/signin')
-
-  }
-
   return (
     <div className="signin col">
       <div className="card-overlay centered">
