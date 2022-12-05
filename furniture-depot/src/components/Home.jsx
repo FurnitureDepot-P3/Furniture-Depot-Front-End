@@ -14,23 +14,23 @@ export default function Home (props) {
             </div>
 
         <div className="catbtns">
-                <button className="livingbtn"> <Link to='/Categories/2' style={{textDecoration: 'none'}}>
-                    Living Room
+                <button className="livingbtn"> <Link to='/Categories/2' style={{textDecoration: 'none', color: 'white', fontSize: '28px'}}>
+                    LIVING ROOM
                 </Link>
                 </button>
 
-                <button className="diningbtn">  <Link to='/Dining' style={{textDecoration: 'none'}}>
+                <button className="diningbtn">  <Link to='/Dining' style={{textDecoration: 'none', color: 'white', fontSize: '28px'}}>
                     DINING ROOM
                 </Link>
                 </button>
 
-                <button className="bedbtn"> <Link to='/Categories/1' style={{textDecoration: 'none'}}>
+                <button className="bedbtn"> <Link to='/Categories/1' style={{textDecoration: 'none', color: 'white', fontSize: '28px'}}>
                     BEDROOM
                 </Link>
                 </button>
 
-                <button className="outbtn"> <Link to='/Outside' style={{textDecoration: 'none'}}>
-                    OUTSIDE FURNITURE
+                <button className="outbtn"> <Link to='/Outside' style={{textDecoration: 'none', color: 'white', fontSize: '28px'}}>
+                    OUTDOOR
                 </Link>
                 </button>
         </div>
