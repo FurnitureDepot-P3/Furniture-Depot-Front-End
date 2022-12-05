@@ -3,24 +3,17 @@ import React from "react";
 
 export default function Nav () {
     return (
-        <nav className="navbar">
-            <div className="links">
-                <button id="home">
-                <Link to='/'>Home</Link>
-                </button>
-                <button id="livrom">
-                <Link to='/Categories/2'>LIVING ROOM</Link> 
-                </button>
-                <button id="dinrom">
-                <Link to='/Dining'>DINING ROOM</Link>
-                </button>
-                <button id="bedrom">
-                <Link to='/Categories/1'>BEDROOM</Link>
-                </button>
-                <button id="outside">
-                <Link to='/Outside'>OUTSIDE FURNITURE</Link>
-                </button>
-            </div>
-        </nav>
+        <div className="navbar">
+            <Link id="home" to='/'>HOME</Link>
+            
+            <Link id="livrom" to='/Categories/2'>LIVING ROOM</Link> 
+            
+            <Link id="dinrom" to='/Dining'>DINING</Link>
+                
+            <Link id="bedrom" to='/Categories/1'>BEDROOM</Link>
+                
+            <Link id="outside" to='/Outside'>OUTDOOR</Link>
+               
+        </div>
     )
 }
