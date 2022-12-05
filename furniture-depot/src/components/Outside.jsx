@@ -19,7 +19,7 @@ const [outdoor, setOutdoor] = useState([])
         return (
          <div className="container">
             <div className="navhome">
-            < Nav />
+                < Nav />
             </div>
             <div className="outdrfurn">  
                 {outdoor.map((products) =>(
