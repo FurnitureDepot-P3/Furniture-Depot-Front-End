@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-// import { useState, useEffect } from "react"
-// import axios from 'axios'
-import React from "react";
-import Nav from "./Nav"
-=======
 import { useState, useEffect } from "react"
 import axios from 'axios'
-
->>>>>>> f7517b89c11d548d84f453b79d2cf617b5d84756
+import React from "react";
+import Nav from "./Nav"
 
 export default function Dining () {
 
@@ -24,7 +18,6 @@ const [dining, setDining] = useState([])
         return <h2> LOADING PAGE! </h2>
     } else {
         return (
-<<<<<<< HEAD
             <div className="container">
                 <div className="navhome">
             < Nav />
@@ -32,17 +25,6 @@ const [dining, setDining] = useState([])
 
             <div className="dinefurn">
                 dinning
-=======
-         <div className="container">
-            
-            <div className="dinefurn">  
-                {dining.map((products) =>(
-                    <div className="box" key={products.name}>
-                        <h3 className="productline1"> {products.name}</h3>
-                        <h2>{products.description}</h2>
-                    </div>
-                ))}
->>>>>>> f7517b89c11d548d84f453b79d2cf617b5d84756
 
             </div>            
         </div>
