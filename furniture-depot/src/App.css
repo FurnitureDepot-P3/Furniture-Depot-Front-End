@@ -3,10 +3,25 @@
  font-family: 'Inknut Antiqua', serif;
 }
 
-.footer {
+/* .App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+
+
+} */
+
+.App-footer {
   font-family: 'Inknut Antiqua', serif;
   background-color: #B1A9A2;
   color: white;
+  width: 100%;
+}
+
+.App-main {
+  flex-grow: 1;
 }
 
 .navbar {
@@ -24,19 +39,24 @@
 
 .navbar a:hover {
   background-color: white;
-  color: black;
+  color: #B1A9A2;
 }
 
+.title-utility {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .homecats {
   
 }
 
-#containerhdr {
+/* #containerhdr {
   display: flex;
   justify-content: space-around;
 
-}
+} */
 
 .headertitle {
  padding-left: 0%;

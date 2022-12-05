@@ -10,15 +10,17 @@ function App() {
   return (
     <div className="App">
       
-      <Header />
-      
+      <div className="App-header">
+        <Header />
+      </div>
 
+      <div className="App-main">
         <Main />
+      </div>
 
-
-
-
-      <Footer />
+      <div className="App-footer">
+        <Footer />
+      </div>
 
     </div>
   );

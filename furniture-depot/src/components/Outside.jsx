@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 
-import Nav from "./Nav"
-
 export default function Outside () {
 
 const [outdoor, setOutdoor] = useState([])
@@ -19,9 +17,7 @@ const [outdoor, setOutdoor] = useState([])
     } else {
         return (
          <div className="container">
-            <div className="navhome">
-                < Nav />
-            </div>
+           
             <div className="outdrfurn">  
                 {outdoor.map((products) =>(
                     <div className="box" key={products.name}>
@@ -31,13 +27,7 @@ const [outdoor, setOutdoor] = useState([])
                         <img src={products.image} />
                     </div>
                 ))}
-
             </div>    
-        
-        
-        
-        
-        
         </div>
         )
     }    
