@@ -4,6 +4,7 @@ import Nav from './Nav'
 
 
 
+
 export default function Living () {
 
     
