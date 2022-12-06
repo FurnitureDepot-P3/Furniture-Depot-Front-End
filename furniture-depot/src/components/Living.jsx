@@ -18,7 +18,7 @@ const [living, setLiving] = useState([])
         return (
          <div className="container">
 
-            <div className="lvrmfurn">  
+            <div className="product-card">  
                 {living.map((products) =>(
                     <div className="box" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
