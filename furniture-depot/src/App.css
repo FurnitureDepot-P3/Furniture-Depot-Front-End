@@ -58,6 +58,12 @@
 
 } */
 
+h6 {
+  color: #B1A9A2;
+  padding: 0px;
+  margin: 0px;
+}
+
 .headertitle {
  padding-left: 0%;
  font-family: 'Inknut Antiqua', serif;
@@ -66,7 +72,17 @@
  padding: 0px;
 }
 
+input {
+  font-family: 'Nunito', sans-serif;
+}
+
+label {
+  font-family: 'Nunito', sans-serif;
+}
+
 .signinbox {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
   font-size: 14px;
 }
 .signinbox a:hover {
@@ -84,6 +100,15 @@ img {
   max-width: 250px;
 }
 
+p {
+  font-family: 'Nunito', sans-serif;
+}
+
+.price {
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+}
+
 .product-card {
   border: 1px solid #B1A9A2;
   border-radius: 4px;
@@ -92,6 +117,16 @@ img {
   padding: 10px;
   height: 450px;
   width: 300px;
+}
+
+.product-card h2, h3, h6, p {
+  text-align: left;
+  padding-left: 25px;
+  margin: 0px;
+}
+
+.product-card p {
+  padding-bottom: 15px;
 }
 
 /* padding is changing row size */

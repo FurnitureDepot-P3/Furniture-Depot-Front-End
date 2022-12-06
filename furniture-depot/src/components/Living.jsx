@@ -22,9 +22,12 @@ const [living, setLiving] = useState([])
                 {living.map((products) =>(
                     <div className="box" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
-                        <h3>${products.price}</h3>
-                        <h4>{products.description}</h4>
+                        <h2 className="price">${products.price}</h2>
+                        <p>In stock. Ships today.</p>
                         <img src={products.image} />
+                        <h6>DESCRIPTION</h6>
+                        <p>{products.description}</p>
+                        <h6>REVIEWS</h6>
                     </div>
                 ))}
 
