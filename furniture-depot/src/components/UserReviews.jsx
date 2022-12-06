@@ -9,11 +9,6 @@ export default function Reviews () {
     const handleChange = event => {
         setFormState({ ...formState, [event.target.id]: event.target.value });
       };
-    //   const handleSubmit = event => {
-    //     event.preventDefault();
-    //     console.log(formState);
-    //     setFormState(initialState);
-    //   };
     
     const handleSubmit = event => {
         event.preventDefault()
@@ -30,7 +25,6 @@ export default function Reviews () {
             console.log(response.data.token)
         })
     }
-
 
     return(
         <div className="wrapper">
@@ -70,6 +64,3 @@ export default function Reviews () {
         </div>
     )
 }
-
-// value={formState.rating} 
-// value={formState.comments}
