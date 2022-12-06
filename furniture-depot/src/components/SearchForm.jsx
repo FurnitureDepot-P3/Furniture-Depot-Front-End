@@ -16,7 +16,7 @@ function Search() {
     }
 
     const getSearch = async () => {
-        const response = await axios.get(`http://localhost:3001/api/products`)
+        const response = await axios.get(`http://localhost:3001/api/${formState['']}`)
       
             console.log(response.data.products)
             setSearch(response.data.products)
@@ -43,11 +43,11 @@ return (
      
       <div className="container">
       {searchResults?.map((products) =>(
-                    <div className="box" key={products.name}>
-                        <h3 className="productline1"> {products.name}</h3>
-                        <h2>{products.description}</h2>
-                    </div>
-                ))}
+        <div className="box" key={products.name}>
+          <h3 className="productline1"> {products.name}</h3>
+          <h2>{products.description}</h2>
+        </div>
+        ))}
       </div>
     </div>
   )

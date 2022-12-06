@@ -26,6 +26,7 @@ export default function Header ({ authenticated, user, handleLogout }) {
             <div>
                 <h1 className="headertitle"> furniture depot </h1>
             </div>
+
                 <div className="searchbox">
                     <SearchForm />
                 </div>
