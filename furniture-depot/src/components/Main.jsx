@@ -6,7 +6,7 @@ import Living from './Living'
 import Bed from './Bed'
 import Outside from './Outside'
 import Reviews from './UserReviews'
-// import Nav from './Nav'
+import Header from './Header'
 import React from 'react';
 import SearchForm from "./SearchForm"
 import SignIn from './SignIn'
@@ -40,7 +40,13 @@ export default function Main () {
     
     return (
     <div>
-
+        <div className="App-header">
+        <Header
+                authenticated={authenticated}
+                user={user}
+                handleLogout={handleLogout}
+                />
+        </div>
         <div>
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -49,7 +55,7 @@ export default function Main () {
                 <Route path="/Living" element={<Living />} />
                 <Route path="/Bed" element={<Bed />} />
                 <Route path="/Outside" element={<Outside />} />
-                <Route path="/Reviews" element={<Reviews />} />
+                {/* <Route path="/Reviews" element={<Reviews />} /> */}
                 <Route path="/SignIn" element={<SignIn 
                 setUser={setUser}
                 toggleAuthenticated={toggleAuthenticated}

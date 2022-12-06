@@ -1,22 +1,13 @@
-import React, { useReducer, useState } from 'react';
-
+import React, { useState } from 'react';
 export default function Reviews () {
-
     const initialState = { name: '',rating: '', comments: ''}
     const [formState, setFormState] = useState(initialState);
-
-
-
     const handleChange = event => {
         setFormState({ ...formState, [event.target.id]: event.target.value });
       };
-
-
       const handleSubmit = event => {
         event.preventDefault();
-
         console.log(formState);
-
         setFormState(initialState);
       };
     return(
@@ -49,5 +40,3 @@ export default function Reviews () {
         </div>
     )
 }
-
-
