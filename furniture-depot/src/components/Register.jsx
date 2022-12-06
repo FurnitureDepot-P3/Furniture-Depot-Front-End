@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
-import Nav from './Nav'
-
 
 const Register = () => {
 
@@ -42,9 +40,7 @@ const Register = () => {
 
   return (
     <div className="signin col">
-      <div className="navhome">
-                < Nav />
-            </div>
+    
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
