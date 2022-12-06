@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default function Outside () {
 
@@ -18,6 +19,8 @@ const [outdoor, setOutdoor] = useState([])
     } else {
         return (
          <div className="container">
+            <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
+
            
             <div className="product-card">  
                 {outdoor.map((products) =>(
@@ -31,6 +34,7 @@ const [outdoor, setOutdoor] = useState([])
                         <h6>PRODUCT #</h6>
                         <p>{products.id}</p>
                         <h6>REVIEWS</h6>
+                        <Link to="/Reviews" className="review-link"> Write a Review </Link>
                     </div>
                 ))}
             </div>    

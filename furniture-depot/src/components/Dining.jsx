@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
+import { Link } from 'react-router-dom'
 
 export default function Dining () {
 
@@ -18,6 +19,7 @@ const [dining, setDining] = useState([])
     } else {
         return (
          <div className="container">
+            <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
 
             <div className="product-card">  
                 {dining.map((products) =>(
@@ -29,6 +31,7 @@ const [dining, setDining] = useState([])
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
                         <h6>REVIEWS</h6>
+                        <Link to="/Reviews" className="review-link"> Write a Review </Link>
                     </div>
                 ))}
 
