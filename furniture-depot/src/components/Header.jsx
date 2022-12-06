@@ -1,13 +1,32 @@
 import React from 'react'
 import SearchForm from "./SearchForm"
-import SignIn from './SignIn'
+import { Link } from "react-router-dom"
+import Nav from "./Nav"
 
 export default function Header () {
     return (
         <div id="containerhdr">
-            <h2 className='signin'> <SignIn/> </h2>
-            <h2 className="headertitle"> Furniture header </h2>
-            <h2 className="searchbox" > <SearchForm /> </h2>
+
+            <div className="title-utility">
+
+            <div>
+                <h1 className="headertitle"> furniture depot </h1>
+            </div>
+
+                <div classname="searchbox">
+                    <SearchForm />
+                </div>
+
+                <div className="signinbox">
+                    <Link id="signinbtn" to='/SignIn' style={{textDecoration: 'none'}}>Sign-In</Link> or <Link id="registerbtn" to="/Register" style={{textDecoration: 'none'}}>Register</Link>
+              
+            </div>
+
+            </div>
+
+            <div className="site-nav">
+                <Nav />
+            </div>
         </div>
     )
 }

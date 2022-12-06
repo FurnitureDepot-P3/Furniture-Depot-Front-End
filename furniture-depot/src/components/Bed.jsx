@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
-import Nav from './Nav'
 
 export default function Bed () {
 
@@ -19,15 +18,17 @@ const [bed, setBed] = useState([])
     } else {
         return (
             <div className="container">
-                <div className="navhome">
-                < Nav />
-                </div>
 
-            <div className="bedfurn">
-            {bed.map((products) =>(
-                    <div className="box" key={products.name}>
-                        <h3 className="productline1"> {products.name}</h3>
-                        <h2>{products.description}</h2>
+            <div className="product-card">
+              {bedroom.map((products) =>(
+                <div className="box" key={products.name}>
+                    <h3 className="productline1"> {products.name}</h3>
+                    <h2 className="price">${products.price}</h2>
+                    <p>In stock. Ships today.</p>
+                    <img src={products.image} />
+                    <h6>DESCRIPTION</h6>
+                    <p>{products.description}</p>
+                    <h6>REVIEWS</h6>
                     </div>
                 ))}
 

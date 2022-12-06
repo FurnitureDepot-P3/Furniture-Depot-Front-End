@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { SignInUser } from '../services/Auth'
 
-
 function SignIn(props) {
 
     let navigate = useNavigate()
@@ -11,7 +10,8 @@ function SignIn(props) {
     const [formValues, setFormValues] = useState({ email: '', password: '' })
   
     const handleChange = (e) => {
-      setFormValues({ ...formValues, [e.target.name]: e.target.value })
+      setFormValues({ ...formValues, [e.target.id]: e.target.value })
+      console.log(formValues)
     }
   
     const handleSubmit = async (e) => {
@@ -25,13 +25,14 @@ function SignIn(props) {
     
   return (
     <div className="signin col">
+      
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label htmlFor="email">Email</label>
             <input
               onChange={handleChange}
-              name="email"
+              id="email"
               type="email"
               placeholder="example@example.com"
               value={formValues.email}
@@ -43,7 +44,7 @@ function SignIn(props) {
             <input
               onChange={handleChange}
               type="password"
-              name="password"
+              id="password"
               value={formValues.password}
               required
             />

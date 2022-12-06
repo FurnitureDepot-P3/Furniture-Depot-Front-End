@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-import Nav from './Nav'
-
-
-
 
 export default function Living () {
-
-    
         
 const [living, setLiving] = useState([])
     useEffect(() => {
@@ -22,27 +16,23 @@ const [living, setLiving] = useState([])
         return <h2> LOADING PAGE! </h2>
     } else {
         return (
-
-
          <div className="container">
-            <div className="navhome">
-            < Nav />
-            </div>
 
-            <div className="lvrmfurn">  
+            <div className="product-card">  
                 {living.map((products) =>(
                     <div className="box" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
-                        <h2>{products.description}</h2>
+                        <h2 className="price">${products.price}</h2>
+                        <p>In stock. Ships today.</p>
+                        <img src={products.image} />
+                        <h6>DESCRIPTION</h6>
+                        <p>{products.description}</p>
+                        <h6>REVIEWS</h6>
                     </div>
                 ))}
 
             </div>    
-        
-        
-        
-        
-        
+    
         </div>
         )
     }    

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-import Nav from "./Nav"
 
 export default function Outside () {
 
@@ -18,23 +17,20 @@ const [outdoor, setOutdoor] = useState([])
     } else {
         return (
          <div className="container">
-            <div className="navhome">
-                < Nav />
-            </div>
-            <div className="outdrfurn">  
+           
+            <div className="product-card">  
                 {outdoor.map((products) =>(
                     <div className="box" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
-                        <h2>{products.description}</h2>
+                        <h2 className="price">${products.price}</h2>
+                        <p>In stock. Ships today.</p>
+                        <img src="https://cdn.pixabay.com/photo/2017/07/11/19/40/shack-2494782_960_720.jpg" />
+                        <h6>DESCRIPTION</h6>
+                        <p>{products.description}</p>
+                        <h6>REVIEWS</h6>
                     </div>
                 ))}
-
             </div>    
-        
-        
-        
-        
-        
         </div>
         )
     }    

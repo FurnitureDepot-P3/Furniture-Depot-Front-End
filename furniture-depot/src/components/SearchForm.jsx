@@ -16,7 +16,7 @@ function Search() {
     }
 
     const getSearch = async () => {
-        const response = await axios.get(`https://localhost:3001/api/search.php?s=${formState['']}`)
+        const response = await axios.get(`http://localhost:3001/api/products`)
       
             console.log(response.data.products)
             setSearch(response.data.products)
