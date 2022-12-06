@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Bed () {
 
-const [bed, setBed] = useState([])
+const [bedroom, setBed] = useState([])
     useEffect(() => {
         const getData = async () => {
             const response = await axios.get(`http://localhost:3001/api/categories/1`)
@@ -13,7 +13,7 @@ const [bed, setBed] = useState([])
         }
         getData()
     }, [])
-    if (!bed) {
+    if (!bedroom) {
         return <h2> LOADING PAGE </h2>
     } else {
         return (
