@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
 
-
 export default function Dining () {
 
 const [dining, setDining] = useState([])
@@ -32,7 +31,6 @@ const [dining, setDining] = useState([])
                         <h6>REVIEWS</h6>
                     </div>
                 ))}
-
 
             </div>            
         </div>
