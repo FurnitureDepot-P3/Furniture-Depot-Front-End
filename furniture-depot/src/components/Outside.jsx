@@ -12,6 +12,7 @@ const [outdoor, setOutdoor] = useState([])
         }
         getData()
     }, [])
+
     if (!outdoor) {
         return <h2> LOADING PAGE! </h2>
     } else {
@@ -27,6 +28,8 @@ const [outdoor, setOutdoor] = useState([])
                         <img src="https://cdn.pixabay.com/photo/2017/07/11/19/40/shack-2494782_960_720.jpg" />
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
+                        <h6>PRODUCT #</h6>
+                        <p>{products.id}</p>
                         <h6>REVIEWS</h6>
                     </div>
                 ))}
