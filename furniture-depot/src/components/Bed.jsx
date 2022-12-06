@@ -20,8 +20,8 @@ const [bed, setBed] = useState([])
         return (
             <div className="container">
                 <div className="navhome">
-            < Nav />
-            </div>
+                < Nav />
+                </div>
 
             <div className="bedfurn">
             {bed.map((products) =>(

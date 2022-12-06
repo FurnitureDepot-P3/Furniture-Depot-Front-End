@@ -20,6 +20,7 @@ export default function Nav () {
                 <button id="outside">
                 <Link to='/Outside'>OUTSIDE FURNITURE</Link>
                 </button>
+                <Link to="/Reviews"> Reviews </Link>
             </div>
         </nav>
     )

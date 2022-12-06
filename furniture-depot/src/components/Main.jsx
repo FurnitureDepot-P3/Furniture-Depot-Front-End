@@ -5,12 +5,39 @@ import Dining from './Dining'
 import Living from './Living'
 import Bed from './Bed'
 import Outside from './Outside'
+import Reviews from './UserReviews'
 // import Nav from './Nav'
 import React from 'react';
 import SearchForm from "./SearchForm"
+import SignIn from './SignIn'
+import Register from './Register'
+import { useState, useEffect } from 'react'
+import { CheckSession } from '../services/Auth'
 
 
 export default function Main () {
+    const [authenticated, toggleAuthenticated] = useState(false)
+    const [user, setUser] = useState(null)
+
+    const handleLogout = () => {
+        setUser(null)
+        toggleAuthenticated(false)
+        localStorage.clear()
+    }
+    
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            checkToken()
+            }
+        }, [])
+
+    const checkToken = async () => {
+        const user = await CheckSession()
+        setUser(user)
+        toggleAuthenticated(true)
+    }
+        
     return (
     <div>
 
@@ -22,6 +49,12 @@ export default function Main () {
                 <Route path="/categories/2" element={<Living />} />
                 <Route path="/categories/1" element={<Bed />} />
                 <Route path="/Outside" element={<Outside />} />
+                <Route path="/Reviews" element={<Reviews />} />
+                <Route path="/SignIn" element={<SignIn 
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+                />} />
+                <Route path="/Register" element={<Register />} />
             </Routes>
         </div>
 

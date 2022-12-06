@@ -18,9 +18,10 @@ const [dining, setDining] = useState([])
         return <h2> LOADING PAGE! </h2>
     } else {
         return (
+
          <div className="container">
             <div className="navhome">
-            < Nav />
+                < Nav />
             </div>
             <div className="dinefurn">  
                 {dining.map((products) =>(

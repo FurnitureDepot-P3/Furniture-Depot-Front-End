@@ -11,10 +11,6 @@
   background-color: transparent;
 }
 
-.homecats {
-  
-}
-
 #containerhdr {
   display: flex;
   justify-content: space-around;
@@ -25,8 +21,6 @@
  padding-left: 0%;
 }
 
-.navhome {
-}
 
 .catbtns {
   display: grid;
@@ -64,4 +58,11 @@
    background-size: cover;
    background-position: bottom;
   }
+
+
+/* title
+style="text-align:left;float:left;"
+
+search
+style="text-align:right;float;right" */
 
