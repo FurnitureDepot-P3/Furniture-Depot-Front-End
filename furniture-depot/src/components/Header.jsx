@@ -13,7 +13,7 @@ export default function Header () {
                 <h1 className="headertitle"> furniture depot </h1>
             </div>
 
-                <div classname="searchbox">
+                <div className="searchbox">
                     <SearchForm />
                 </div>
 
