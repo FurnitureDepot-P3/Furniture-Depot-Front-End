@@ -55,7 +55,7 @@ export default function Main () {
                 <Route path="/Living" element={<Living />} />
                 <Route path="/Bed" element={<Bed />} />
                 <Route path="/Outside" element={<Outside />} />
-                <Route path="/Reviews" element={<Reviews />} />
+                {/* <Route path="/Reviews" element={<Reviews />} /> */}
                 <Route path="/SignIn" element={<SignIn 
                 setUser={setUser}
                 toggleAuthenticated={toggleAuthenticated}
