@@ -3,25 +3,23 @@ import axios from 'axios'
 
 export default function Living () {
         
-const [living, setLiving] = useState([])
-const [review, setReview] = useState([])
+const [living, setLiving] = useState(null)
+const [review, setReview] = useState(null)
     useEffect(() => {
         const getData = async () => {
             const response = await axios.get(`http://localhost:3001/api/categories/2`)
             setLiving(response.data.products)
             console.log(response.data.products)
             const reviewResponse = await axios.get(`http://localhost:3001/api/products/reviews`)
-            setReview(reviewResponse.data)
+            setReview(reviewResponse.data[1])
             console.log(reviewResponse.data)
-            console.log(reviewResponse.data[0].reviews[0].comment)
+            // console.log(reviewResponse.data[0].reviews[0].comment)
         }
         getData()
     }, [])
-    if (!living && !review) {
-        return <h2> LOADING PAGE! </h2>
-    } else {
-        return (
-         <div className="container">
+
+    return living && review ? (
+        <div className="container">
 
             <div className="product-card">  
                 {living.map((products) =>(
@@ -36,15 +34,12 @@ const [review, setReview] = useState([])
                         </div>
                 ))}
             <div className="review-card">
-                {review.map((reviews) =>(
-                    <div className="box" key={reviews.reviews[0]}>
-                        <h3 className="productline1"> {reviews.reviews[0].comment}</h3>
-                        <h2 className="rating">{reviews.reviews[0].rating}</h2>
-                        </div>
-                ))}
+                    <div className="box" >
+                        <h3 className="productline1">{review.reviews[0].comment} </h3>
+                        <h2 className="rating"></h2>
+                    </div>
             </div>
             </div>
         </div>
-        )
+        ) : <h1> Loading Please Wait ... </h1>
     }
-}
