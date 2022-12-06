@@ -153,12 +153,10 @@ p {
   background-position: center;
 }
 
-
 .diningbtn {
   font-family: 'Inknut Antiqua', serif;
   border-style: none;
   border-radius: 4px;
-  color: aliceblue;
   padding: 100px 16px;
   background-image: url("https://images.unsplash.com/photo-1642014162521-cfdb616ea6db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=769&q=80");
   background-size: cover;
@@ -178,8 +176,8 @@ p {
 
 
 /* title
-style="text-align:left;float:left;" */
+style="text-align:left;float:left;"
 
-/* /*search
+search
 style="text-align:right;float;right" */
 

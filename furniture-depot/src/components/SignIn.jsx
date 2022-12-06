@@ -20,7 +20,7 @@ function SignIn(props) {
       setFormValues({ email: '', password: '' })
       props.setUser(payload)
       props.toggleAuthenticated(true)
-      navigate('/Home')
+      navigate('/')
     }
     
   return (
