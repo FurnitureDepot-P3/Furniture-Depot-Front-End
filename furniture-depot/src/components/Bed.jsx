@@ -22,7 +22,7 @@ const [bedroom, setBed] = useState([])
         return (
             <div className="container">
 
-            <div className="bedfurn">
+            <div className="product-card">
               {bedroom.map((products) =>(
                 <div className="box" key={products.name}>
                     <h3 className="productline1"> {products.name}</h3>

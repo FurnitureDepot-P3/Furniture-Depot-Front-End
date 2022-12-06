@@ -18,13 +18,13 @@ const [outdoor, setOutdoor] = useState([])
         return (
          <div className="container">
            
-            <div className="outdrfurn">  
+            <div className="product-card">  
                 {outdoor.map((products) =>(
                     <div className="box" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
                         <h3>${products.price}</h3>
                         <h4>{products.description}</h4>
-                        <img src={products.image} />
+                        <img src="https://cdn.pixabay.com/photo/2017/07/11/19/40/shack-2494782_960_720.jpg" />
                     </div>
                 ))}
             </div>    

@@ -20,7 +20,7 @@ const [dining, setDining] = useState([])
         return (
          <div className="container">
 
-            <div className="dinefurn">  
+            <div className="product-card">  
                 {dining.map((products) =>(
                     <div className="box" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
