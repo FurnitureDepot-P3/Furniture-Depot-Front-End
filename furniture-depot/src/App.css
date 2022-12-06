@@ -133,6 +133,7 @@ img {
   font-family: 'Inknut Antiqua', serif;
   border-style: none;
   border-radius: 4px;
+  padding: 100px 16px;
   background-image: url("https://images.unsplash.com/photo-1600210492090-a159ffa3aeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"); 
   background-size: cover;
   background-position: bottom;
