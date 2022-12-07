@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
+import { Link } from 'react-router-dom'
 
 export default function Dining () {
 
@@ -32,7 +33,8 @@ const [review, setReview] = useState(null)
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
                         <h6>REVIEWS</h6>
-                        </div>
+                        <Link to="/Reviews" className="review-link"> Write a Review </Link>
+                    </div>
                 ))}
             <div className="review-card">
                     <div className="box" >

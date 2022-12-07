@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default function Outside () {
 
@@ -29,8 +30,11 @@ const [review, setReview] = useState(null)
                         <img src={products.image} />
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
+                        <h6>PRODUCT #</h6>
+                        <p>{products.id}</p>
                         <h6>REVIEWS</h6>
-                        </div>
+                        <Link to="/Reviews" className="review-link"> Write a Review </Link>
+                    </div>
                 ))}
             <div className="review-card">
                     <div className="box" >
