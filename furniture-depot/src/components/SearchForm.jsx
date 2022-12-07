@@ -16,11 +16,21 @@ function Search() {
     }
 
     const getSearch = async () => {
-        const response = await axios.get(`http://localhost:3001/api/products`)
+        const response = await axios.get(`http://localhost:3001/api/categories/2`)
       
             console.log(response.data.products)
             setSearch(response.data.products)
         }
+
+// a google react searchbar 
+// b filter 
+// take search bar from header
+
+// use search bar to filter set data so it shows whats in filter
+
+
+
+
 
 return (
   
@@ -43,11 +53,11 @@ return (
      
       <div className="container">
       {searchResults?.map((products) =>(
-                    <div className="box" key={products.name}>
-                        <h3 className="productline1"> {products.name}</h3>
-                        <h2>{products.description}</h2>
-                    </div>
-                ))}
+        <div className="box" key={products.name}>
+          <h3 className="productline1"> {products.name}</h3>
+          <h2>{products.description}</h2>
+        </div>
+        ))}
       </div>
     </div>
   )

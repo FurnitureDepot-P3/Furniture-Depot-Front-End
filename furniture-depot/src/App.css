@@ -18,12 +18,17 @@
   background-color: #B1A9A2;
   color: white;
   width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 .App-main {
   flex-grow: 1;
 }
 
+a {
+  font-family: 'Nunito', sans-serif;
+}
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -109,13 +114,19 @@ p {
   font-size: 32px;
 }
 
+.product-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
 .product-card {
   border: 1px solid #B1A9A2;
   border-radius: 4px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
   margin: 10px;
   padding: 10px;
-  height: 450px;
+  height: 600px;
   width: 300px;
 }
 
@@ -125,6 +136,12 @@ p {
   margin: 0px;
 }
 
+.review-link {
+  display: block;
+  text-align: left;
+  padding-left: 12px;
+  padding-top: 10px;
+}
 .product-card p {
   padding-bottom: 15px;
 }
@@ -174,7 +191,13 @@ p {
   background-position: bottom;
 }
 
-
+.box {
+  padding: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 17em;
+  height: 23em;
+}
 /* title
 style="text-align:left;float:left;"
 
