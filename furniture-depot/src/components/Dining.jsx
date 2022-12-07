@@ -23,9 +23,9 @@ const [review, setReview] = useState(null)
     return dining && review ? (
         <div className="container">
 
-            <div className="product-card">  
+            <div className="product-container">  
                 {dining.map((products) =>(
-                    <div className="box" key={products.name}>
+                    <div className="product-card" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
                         <h2 className="price">${products.price}</h2>
                         <p>In stock. Ships today.</p>
@@ -33,7 +33,9 @@ const [review, setReview] = useState(null)
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
                         <h6>REVIEWS</h6>
-                        <Link to="/Reviews" className="review-link"> Write a Review </Link>
+                        <div className="review-link">
+                            <Link to="/Reviews" className="review-link"> Write a Review </Link>
+                        </div>
                     </div>
                 ))}
             <div className="review-card">
