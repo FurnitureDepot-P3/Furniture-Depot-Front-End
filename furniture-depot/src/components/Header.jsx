@@ -9,6 +9,7 @@ export default function Header ({ authenticated, user, handleLogout }) {
         authenticatedOptions = (
             <div className="signinbox">
                 <span className="user">Welcome, {user.email}</span>
+               
                 <Link to="/UserProfile"> Account </Link>
                 <Link onClick={handleLogout} to="/">
                 Sign Out
@@ -19,6 +20,7 @@ export default function Header ({ authenticated, user, handleLogout }) {
     const publicOptions = (
         <div className="signinbox">
             <Link id="signinbtn" to='/SignIn' style={{textDecoration: 'none'}}>Sign-In</Link> or <Link id="registerbtn" to="/Register" style={{textDecoration: 'none'}}>Register</Link>
+           
         </div>
     )   
     return (
