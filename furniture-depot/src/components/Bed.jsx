@@ -37,7 +37,7 @@ const [review, setReview] = useState(null)
             <div className="review-card">
                     <div className="box" >
                         <h3 className="productline1">{review.reviews[0].comment} </h3>
-                        <h2 className="rating"></h2>
+                        <h4 className="rating">People who purchased this product rate it a {review.reviews[0].rating} out of 5!</h4>
                     </div>
             </div>
             </div>
