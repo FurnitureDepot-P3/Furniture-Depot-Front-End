@@ -18,6 +18,8 @@
   background-color: #B1A9A2;
   color: white;
   width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 .App-main {
@@ -189,7 +191,13 @@ p {
   background-position: bottom;
 }
 
-
+.box {
+  padding: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 17em;
+  height: 23em;
+}
 /* title
 style="text-align:left;float:left;"
 
