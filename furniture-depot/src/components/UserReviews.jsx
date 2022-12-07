@@ -26,6 +26,8 @@ export default function Reviews () {
         })
     }
 
+
+
     return(
         <div className="wrapper">
             <h1>Post a Review!</h1>
@@ -60,6 +62,7 @@ export default function Reviews () {
                     </label>
                 </fieldset>
                 <button type="submit">Submit</button>
+                {/* <button type="delete" onClick={handleRemove}>Delete</button> */}
             </form>
         </div>
     )
