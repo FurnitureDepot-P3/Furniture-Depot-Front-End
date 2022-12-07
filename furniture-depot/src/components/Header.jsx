@@ -9,6 +9,7 @@ export default function Header ({ authenticated, user, handleLogout }) {
         authenticatedOptions = (
             <div className="signinbox">
                 <span className="user">Welcome, {user.email}</span>
+                <Link to="/UserProfile"> Account </Link>
                 <Link onClick={handleLogout} to="/">
                 Sign Out
                 </Link>
