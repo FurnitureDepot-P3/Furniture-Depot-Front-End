@@ -18,6 +18,8 @@ const [review, setReview] = useState(null)
         }
         getData()
     }, [])
+
+
     return outdoor && review ? (
         <div className="container">
             <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
@@ -33,21 +35,26 @@ const [review, setReview] = useState(null)
                         <p>{products.description}</p>
                         <h6>PRODUCT #</h6>
                         <p>{products.id}</p>
+
+                        <Link to={`/outside/${products.id}`} className="view-details">View details ▻</Link>
+
                         <h6>REVIEWS</h6>
                         <p className="review-text"> People who purchased this product rate it a {review.reviews[0].rating} out of 5!</p>
                         <p className="review-text">{review.reviews[0].comment} </p>
                         <div className="review-link">
                             <Link to="/Reviews" className="review-link"> Write a Review </Link>
                         </div>
-                    </div>
+
+                        
+                     </div>
                 ))}
-            {/* <div className="review-card">
-                    <div className="box" > */}
-                        {/* <h3 className="productline1">{review.reviews[0].comment} </h3> */}
+             {/* <div className="review-card">
+    //                 <div className="box" > */}
+                         {/* <h3 className="productline1">{review.reviews[0].comment} </h3> */}
                         {/* <h4 className="rating">People who purchased this product rate it a {review.reviews[0].rating} out of 5!</h4>
-                    </div>
-            </div> */}
-            </div>
-        </div>
+    //                 </div>
+    //         </div> */}
+             </div>
+         </div>
         ) : <h1> Loading Please Wait ... </h1>
     }
