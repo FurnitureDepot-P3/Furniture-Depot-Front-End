@@ -17,6 +17,40 @@ export default function UserProfile () {
         getData()
     }, [])
 
+    const [reviews, setReviews] = useState([])
+    
+// create a new value called id, set it in state. make new method when we click on something, set that item's id as stately value. Using `${ID}`. UseParams? event.click. or event.target.value. Console after click to see what id is. is it event.target etc. setId in state
+
+const deleteReview = async () => {
+    const response = await axios.delete('http://localhost:3001/api/reviews/1')
+    console.log("deleted successfully")
+   
+    console.log(response.status)
+    // console.log(response.data.token)
+}
+
+
+
+// const [id, setId] = useState()
+// const handleChange = event => {
+//     setId({ ...id, [event.target.id]: event.target.value })
+//     console.log(setId)
+// }
+
+//     const handleSubmit = event => {
+//         event.preventDefault()
+//         console.log(reviews)
+//         const response = axios.delete('http://localhost:3001/api/reviews/11').then(
+//             response => {
+
+//             }
+//         )
+        
+//         console.log(response.status)
+//         }
+        
+
+
     return profile ? (
         <div className="container">
             {/* <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link> */}
@@ -36,8 +70,9 @@ export default function UserProfile () {
                         <h6>REVIEW</h6>
                         <p className="review-text">{myReviews.comment}</p>
                        
-                        <div className="review-link">
-                            <Link to="/Reviews" className="review-link"> Delete Review </Link>
+                        <div className="delete-button">
+                            <button onClick={deleteReview}> Delete Review</button>
+                           
                         </div>
                         </div>
                 ))}
