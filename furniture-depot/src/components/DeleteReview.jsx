@@ -10,9 +10,7 @@ const DeleteReview = ({myReviews}) => {
             }
         })
         console.log("deleted successfully")
-       
         console.log(response.status)
-        // console.log(response.data.token)
     }
 
 
