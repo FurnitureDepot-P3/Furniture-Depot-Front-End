@@ -1,5 +1,4 @@
 import React from 'react'
-import SearchForm from "./SearchForm"
 import { Link } from "react-router-dom"
 import Nav from "./Nav"
 
@@ -24,12 +23,8 @@ export default function Header ({ authenticated, user, handleLogout }) {
     return (
         <div id="containerhdr">
             <div className="title-utility">
-            <div>
-                <h1 className="headertitle"> furniture depot </h1>
-            </div>
-
-                <div className="searchbox">
-                    <SearchForm />
+                <div>
+                    <h1 className="headertitle"> furniture depot </h1>
                 </div>
                 <div className="signinbox">
                     {authenticated && user ? authenticatedOptions : publicOptions}

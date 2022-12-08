@@ -8,7 +8,6 @@ import Outside from './Outside'
 import Reviews from './UserReviews'
 import Header from './Header'
 import React from 'react';
-import SearchForm from "./SearchForm"
 import SignIn from './SignIn'
 import Register from './Register'
 import UserProfile from './UserProfile'
@@ -51,8 +50,7 @@ export default function Main () {
         </div>
         <div>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/SearchForm" element={<SearchForm/>}/>
+                <Route path="/" element={<Home />} />               
                 <Route path ="/Dining" element={<Dining />} />
                 <Route path="/Living" element={<Living />} />
                 <Route path="/Bed" element={<Bed />} />
