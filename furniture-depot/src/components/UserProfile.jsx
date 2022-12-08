@@ -1,4 +1,3 @@
-// Convert "write review" Link to form for delete and edit
 import DeleteReview from "./DeleteReview"
 import { useState, useEffect } from "react"
 import axios from 'axios'
@@ -38,6 +37,7 @@ const deleteReview = async () => {
             <div className="table-container">
 
             <table className="table">
+                <thead>
                 <tr className="table-header">
                     <th>PRODUCT #</th>
                     <th>RATING</th>
@@ -45,7 +45,9 @@ const deleteReview = async () => {
                     <th>EDIT</th>
                     <th>DELETE</th>
                 </tr>
-    
+                </thead>
+
+                <tbody>
                 {profile.map((myReviews) =>(
                     <tr className="table-rows">
                         <td>{myReviews.product_id}</td>
@@ -55,26 +57,9 @@ const deleteReview = async () => {
                         <td><button onClick={deleteReview}> DELETE </button></td>
                     </tr>
                 ))}
+                </tbody>
             </table>
             </div>
-
-            {/* <div className="product-container">  
-                {profile.map((myReviews) =>(
-                    <div className="product-card" key={myReviews.id}>
-                        
-                        <h6>PRODUCT</h6>
-                        <p className="item-reviewed"># {myReviews.product_id}</p>
-
-                        <h6>RATING</h6>
-                        <p className="rating">{myReviews.rating} out of 5</p>
-                       
-                        <h6>REVIEW</h6>
-                        <p className="review-text">{myReviews.comment}</p>
-                       
-                        <DeleteReview myReviews={myReviews}/>
-                        </div>
-                ))}
-            </div> */}
         </div>
         ) : <h1> Loading Please Wait ... </h1>
     }
