@@ -1,5 +1,5 @@
 // Convert "write review" Link to form for delete and edit
-
+import DeleteReview from "./DeleteReview"
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
@@ -21,13 +21,7 @@ export default function UserProfile () {
     
 // create a new value called id, set it in state. make new method when we click on something, set that item's id as stately value. Using `${ID}`. UseParams? event.click. or event.target.value. Console after click to see what id is. is it event.target etc. setId in state
 
-const deleteReview = async () => {
-    const response = await axios.delete('http://localhost:3001/api/reviews/1')
-    console.log("deleted successfully")
-   
-    console.log(response.status)
-    // console.log(response.data.token)
-}
+
 
 
 
@@ -70,10 +64,7 @@ const deleteReview = async () => {
                         <h6>REVIEW</h6>
                         <p className="review-text">{myReviews.comment}</p>
                        
-                        <div className="delete-button">
-                            <button onClick={deleteReview}> Delete Review</button>
-                           
-                        </div>
+                        <DeleteReview myReviews={myReviews}/>
                         </div>
                 ))}
             </div>

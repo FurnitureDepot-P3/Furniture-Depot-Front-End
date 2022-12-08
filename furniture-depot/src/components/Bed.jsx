@@ -3,7 +3,7 @@ import axios from 'axios'
 import React from "react";
 import { Link } from 'react-router-dom'
 
-export default function Bed () {
+export default function Bedroom () {
 
 const [bedroom, setBed] = useState(null)
 const [review, setReview] = useState(null)
