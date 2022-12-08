@@ -1,3 +1,5 @@
+// Convert "write review" Link to form for delete and edit
+import DeleteReview from "./DeleteReview"
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
@@ -69,10 +71,7 @@ const deleteReview = async () => {
                         <h6>REVIEW</h6>
                         <p className="review-text">{myReviews.comment}</p>
                        
-                        <div className="delete-button">
-                            <button onClick={deleteReview}> Delete Review</button>
-                           
-                        </div>
+                        <DeleteReview myReviews={myReviews}/>
                         </div>
                 ))}
             </div> */}
