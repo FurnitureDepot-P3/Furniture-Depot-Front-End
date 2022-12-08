@@ -1,10 +1,23 @@
-// import { useEffect, useState} from 'react'
-// import {ResponseAPI} from "../api"
+import axios from 'axios'
 
-// export const DeleteReview = () => {
-//     const [reviews, setReviews] = useState<ResponseAPI[]:
+const DeleteReview = ({myReviews}) => {
 
-//     useEffect (() =>{
-//         getReviews().then(data => setPosts(data))
-//     }, [])
-//     const handleDelete = async (id: number) => {
+    const deleteReview = async () => {
+        const response = await axios.delete(`http://localhost:3001/api/reviews/${myReviews.id}`)
+        console.log("deleted successfully")
+       
+        console.log(response.status)
+        // console.log(response.data.token)
+    }
+
+
+    return (
+    <div className="delete-button">
+                            <button onClick={deleteReview}> Delete Review</button>
+                           
+                        </div>
+    )
+}
+
+export default DeleteReview;
+
