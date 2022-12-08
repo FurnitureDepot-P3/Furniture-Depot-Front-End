@@ -30,7 +30,7 @@ const [review, setReview] = useState(null)
                         <h3 className="productline1"> {products.name}</h3>
                         <h2 className="price">${products.price}</h2>
                         <p>In stock. Ships today.</p>
-                        <img src={products.image} />
+                        <img src={products.image} alt="#"/>
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
                         <h6>PRODUCT #</h6>
