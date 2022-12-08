@@ -3,7 +3,7 @@ import axios from 'axios'
 import React from "react";
 import { Link } from 'react-router-dom'
 
-export default function Bedroom () {
+export default function Bed () {
 
 const [bedroom, setBed] = useState(null)
 const [review, setReview] = useState(null)
@@ -12,14 +12,13 @@ const [review, setReview] = useState(null)
             const response = await axios.get(`http://localhost:3001/api/categories/1`)
             setBed(response.data.products)
             console.log(response.data.products)
-            const reviewResponse = await axios.get(`http://localhost:3001/api/products/reviews`)
+            const reviewResponse = await axios.get(`http://localhost:3001/api/categories/products/reviews`)
             setReview(reviewResponse.data[0])
             console.log(reviewResponse.data)
-            console.log(reviewResponse.data[0].reviews[0].comment)
+            // console.log(reviewResponse.data[0].reviews[0].comment)
         }
         getData()
     }, [])
-
     return bedroom && review ? (
         <div className="container">
             <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>

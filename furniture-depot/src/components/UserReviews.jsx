@@ -1,32 +1,37 @@
-import React, { useReducer, useState } from 'react';
-import axios from 'axios'
+import React, { useReducer, useState } from "react";
+import axios from "axios";
 
-export default function Reviews () {
-    const initialState = { 
-        name: '', userId: '', productId: '', rating: '', comments: ''}
-    const [formState, setFormState] = useState(initialState);
-   
-    const handleChange = event => {
-        setFormState({ ...formState, [event.target.id]: event.target.value });
-      };
-    
-    const handleSubmit = event => {
-        event.preventDefault()
-        console.log(formState)
-        setFormState(initialState)
-        const createReview = {
-            user_id: formState.userId,
-            product_id: formState.productId,
-            rating: formState.rating,
-            comment: formState.comments
-        }
-        axios.post('http://localhost:3001/api/products/1/myreview', createReview).then((response) => {
-            console.log(response.status)
-            console.log(response.data.token)
-        })
-    }
+export default function Reviews() {
+  const initialState = {
+    name: "",
+    userId: "",
+    productId: "",
+    rating: "",
+    comments: "",
+  };
+  const [formState, setFormState] = useState(initialState);
 
+  const handleChange = (event) => {
+    setFormState({ ...formState, [event.target.id]: event.target.value });
+  };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formState);
+    setFormState(initialState);
+    const createReview = {
+      user_id: formState.userId,
+      product_id: formState.productId,
+      rating: formState.rating,
+      comment: formState.comments,
+    };
+    axios
+      .post("http://localhost:3001/api/products/1/myreview", createReview)
+      .then((response) => {
+        console.log(response.status);
+        console.log(response.data.token);
+      });
+  };
 
     return(
         <div className="wrapper">
@@ -62,7 +67,6 @@ export default function Reviews () {
                     </label>
                 </fieldset>
                 <button type="submit">Submit</button>
-                {/* <button type="delete" onClick={handleRemove}>Delete</button> */}
             </form>
         </div>
     )
