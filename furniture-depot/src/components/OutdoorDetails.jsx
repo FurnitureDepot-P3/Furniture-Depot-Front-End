@@ -41,7 +41,7 @@ export default function OutdoorDetails (props) {
     //         </div>    
     //           <Link to="/outside" className="back-btn"> ◁ Back to Outdoor </Link>
     //         </div>
-        
+         
     //     </div>
     // ) : null; 
 }
