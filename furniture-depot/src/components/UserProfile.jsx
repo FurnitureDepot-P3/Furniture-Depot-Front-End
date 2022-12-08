@@ -19,16 +19,16 @@ export default function UserProfile () {
     const [reviews, setReviews] = useState([])
 
 
-const deleteReview = async () => {
-    const response = await axios.delete('http://localhost:3001/api/reviews/1', {
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem("token")}`
-        }
-    })
-    console.log("deleted successfully")
-    console.log(response.status)
-}
+// const deleteReview = async () => {
+//     const response = await axios.delete('http://localhost:3001/api/reviews/1', {
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'Authorization': `Bearer ${localStorage.getItem("token")}`
+//         }
+//     })
+//     console.log("deleted successfully")
+//     console.log(response.status)
+// }
 
     return profile ? (
         <div>
@@ -54,7 +54,8 @@ const deleteReview = async () => {
                         <td>{myReviews.rating}</td>
                         <td className="table-comment"> {myReviews.comment}</td>
                         <td><button> EDIT </button></td>
-                        <td><button onClick={deleteReview}> DELETE </button></td>
+                        {/* <td><button onClick={deleteReview}> DELETE </button></td> */}
+                        <td><DeleteReview myReviews={myReviews}/></td>
                     </tr>
                 ))}
                 </tbody>
