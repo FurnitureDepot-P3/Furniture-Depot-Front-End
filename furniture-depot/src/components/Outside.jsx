@@ -39,11 +39,11 @@ const [review, setReview] = useState(null)
                         <Link to={`/outside/${products.id}`} className="view-details">View details ▻</Link>
 
                         <h6>REVIEWS</h6>
-                        <p className="review-text"> People who purchased this product rate it a {review.reviews[0].rating} out of 5!</p>
+                        {/* <p className="review-text"> People who purchased this product rate it a {review.reviews[0].rating} out of 5!</p>
                         <p className="review-text">{review.reviews[0].comment} </p>
                         <div className="review-link">
                             <Link to="/Reviews" className="review-link"> Write a Review </Link>
-                        </div>
+                        </div> */}
 
                         
                      </div>
