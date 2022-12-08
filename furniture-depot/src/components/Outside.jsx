@@ -39,7 +39,7 @@ export default function Outside () {
                         <p className="review-text"> People who purchased this product rate it a {products.reviews[0].rating} out of 5!</p>
                         <p className="review-text">{products.reviews[0].comment} </p>
                         <div className="review-link">
-                            <Link to="/Reviews" className="review-link"> Write a Review </Link>
+                            <Link to="/Reviews" className="review-lnk"> Write a Review ✎</Link>
                         </div>
                         </div>
                 ))}

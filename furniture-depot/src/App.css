@@ -148,11 +148,30 @@ p {
 }
 
 .review-link {
+  border-top: 1px solid #B1A9A2;
+  border-bottom: 1px solid #B1A9A2;
+  text-decoration: none;
+  color: #B1A9A2;
   display: block;
   text-align: left;
   padding-left: 12px;
-  padding-top: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 15px;
 }
+
+.review-lnk {
+  text-decoration: none;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+.review-lnk:hover {
+  text-decoration: underline;
+  color: #B1A9A2;
+  
+}
+
 .product-card p {
   padding-bottom: 15px;
 }
