@@ -40,7 +40,7 @@ export default function UserProfile () {
                         <td>{myReviews.product_id}</td>
                         <td>{myReviews.rating}</td>
                         <td className="table-comment"> {myReviews.comment}</td>
-                        <td><button> EDIT </button></td>
+                        <td><button><Link to="/UpdateForm"> EDIT </Link></button></td>
                         <td><DeleteReview myReviews={myReviews}/></td>
                     </tr>
                 ))}

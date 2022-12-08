@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const UpdateReview = () => {
+const UpdateReview = ({myReviews}) => {
 
     const updateReview = async () => {
         const response = await axios.put(`http://localhost:3001/api/reviews/${myReviews.id}`, {
