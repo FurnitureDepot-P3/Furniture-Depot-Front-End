@@ -20,7 +20,7 @@ const [review, setReview] = useState(null)
     }, [])
 
 
-    return outdoor && review ? (
+    return outdoor && review ? (        
         <div className="container">
             <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
 
