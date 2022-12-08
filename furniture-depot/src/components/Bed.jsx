@@ -3,7 +3,7 @@ import axios from 'axios'
 import React from "react";
 import { Link } from 'react-router-dom'
 
-export default function Bedroom () {
+export default function Bed () {
 
 const [bedroom, setBed] = useState(null)
 const [review, setReview] = useState(null)
@@ -12,13 +12,29 @@ const [review, setReview] = useState(null)
             const response = await axios.get(`http://localhost:3001/api/categories/1`)
             setBed(response.data.products)
             console.log(response.data.products)
-            const reviewResponse = await axios.get(`http://localhost:3001/api/products/reviews`)
-            setReview(reviewResponse.data[0])
-            console.log(reviewResponse.data)
-            console.log(reviewResponse.data[0].reviews[0].comment)
+            // const reviewResponse = await axios.get(`http://localhost:3001/api/products/reviews`)
+            // setReview(reviewResponse.data[0])
+            // console.log(reviewResponse.data)
+            // console.log(reviewResponse.data[0].reviews[0].comment)
         }
         getData()
     }, [])
+
+    const [product, setProduct] = useState(null)
+    useEffect(() => {
+        const getData = async () => {
+            const productResponse = await axios.get(`http://localhost:3001/api/products/reviews`)
+                setProduct(productResponse.data)
+                console.log(productResponse.data)
+    
+        }
+        getData()
+    }, [])
+    
+    const newArray = product.filter(category => category.category_id === 1)
+    console.log(newArray)
+
+
 
     return bedroom && review ? (
         <div className="container">
@@ -41,12 +57,7 @@ const [review, setReview] = useState(null)
                         </div>
                         </div>
                 ))}
-            {/* <div className="review-card">
-                    <div className="box" >
-                        <h3 className="productline1">{review.reviews[0].comment} </h3>
-                        <h4 className="rating">People who purchased this product rate it a {review.reviews[0].rating} out of 5!</h4>
-                    </div>
-            </div> */}
+           
             </div>
         </div>
         ) : <h1> Loading Please Wait ... </h1>

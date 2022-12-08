@@ -189,10 +189,30 @@ p {
   background-position: bottom;
 }
 
+th, td {
+  border-bottom: 1px solid #B1A9A2;
+  /* border-collapse: collapse; */
+}
 
-/* title
-style="text-align:left;float:left;"
+.table-comment {
+  text-align: left;
+  padding-left: 10px;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
 
-search
-style="text-align:right;float;right" */
+.table-header {
+  color: #B1A9A2;
+  font-size: 12px;
+  padding: 5px;
+}
+
+td {
+  font-family: 'Nunito', sans-serif;
+  height: 40px;
+  min-width: 90px;
+}
 

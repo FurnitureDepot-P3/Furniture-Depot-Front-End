@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 import Home from './Home'
 import Dining from './Dining'
@@ -11,11 +11,9 @@ import React from 'react';
 import SearchForm from "./SearchForm"
 import SignIn from './SignIn'
 import Register from './Register'
-import OutdoorDetails from './OutdoorDetails'
 import UserProfile from './UserProfile'
 import { useState, useEffect } from 'react'
 import { CheckSession } from '../services/Auth'
-import axios from 'axios'
 
 
 export default function Main () {
@@ -40,7 +38,6 @@ export default function Main () {
         setUser(user)
         toggleAuthenticated(true)
     }
-
     
     return (
     <div>
@@ -59,7 +56,6 @@ export default function Main () {
                 <Route path="/Living" element={<Living />} />
                 <Route path="/Bed" element={<Bed />} />
                 <Route path="/Outside" element={<Outside />} />
-                <Route path="/Outside/:id" element={<OutdoorDetails />} />
                 <Route path="/Reviews" element={<Reviews />} />
                 <Route path="/SignIn" element={<SignIn 
                 setUser={setUser}
