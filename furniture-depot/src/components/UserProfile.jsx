@@ -1,5 +1,3 @@
-// Convert "write review" Link to form for delete and edit
-
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
@@ -18,54 +16,55 @@ export default function UserProfile () {
     }, [])
 
     const [reviews, setReviews] = useState([])
-    
-// create a new value called id, set it in state. make new method when we click on something, set that item's id as stately value. Using `${ID}`. UseParams? event.click. or event.target.value. Console after click to see what id is. is it event.target etc. setId in state
+
 
 const deleteReview = async () => {
-    const response = await axios.delete('http://localhost:3001/api/reviews/1')
+    const response = await axios.delete('http://localhost:3001/api/reviews/1', {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
+    })
     console.log("deleted successfully")
-   
     console.log(response.status)
-    // console.log(response.data.token)
 }
 
-
-
-// const [id, setId] = useState()
-// const handleChange = event => {
-//     setId({ ...id, [event.target.id]: event.target.value })
-//     console.log(setId)
-// }
-
-//     const handleSubmit = event => {
-//         event.preventDefault()
-//         console.log(reviews)
-//         const response = axios.delete('http://localhost:3001/api/reviews/11').then(
-//             response => {
-
-//             }
-//         )
-        
-//         console.log(response.status)
-//         }
-        
-
-
     return profile ? (
-        <div className="container">
-            {/* <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link> */}
+        <div>
+            <h2>My Reviews</h2>
 
-            <div className="product-container">  
+            <div className="table-container">
+
+            <table className="table">
+                <tr className="table-header">
+                    <th>PRODUCT #</th>
+                    <th>RATING</th>
+                    <th>REVIEW</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+    
+                {profile.map((myReviews) =>(
+                    <tr className="table-rows">
+                        <td>{myReviews.product_id}</td>
+                        <td>{myReviews.rating}</td>
+                        <td className="table-comment"> {myReviews.comment}</td>
+                        <td><button> EDIT </button></td>
+                        <td><button onClick={deleteReview}> DELETE </button></td>
+                    </tr>
+                ))}
+            </table>
+            </div>
+
+            {/* <div className="product-container">  
                 {profile.map((myReviews) =>(
                     <div className="product-card" key={myReviews.id}>
                         
-                        <h6>MY REVIEWS</h6>
-
                         <h6>PRODUCT</h6>
-                        <h3 className="item-reviewed"> {myReviews.product_id}</h3>
+                        <p className="item-reviewed"># {myReviews.product_id}</p>
 
                         <h6>RATING</h6>
-                        <h2 className="rating">{myReviews.rating}</h2>
+                        <p className="rating">{myReviews.rating} out of 5</p>
                        
                         <h6>REVIEW</h6>
                         <p className="review-text">{myReviews.comment}</p>
@@ -76,7 +75,7 @@ const deleteReview = async () => {
                         </div>
                         </div>
                 ))}
-            </div>
+            </div> */}
         </div>
         ) : <h1> Loading Please Wait ... </h1>
     }
