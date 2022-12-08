@@ -5,22 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function Bed () {
 
-const [bedroom, setBed] = useState(null)
-const [review, setReview] = useState(null)
-    useEffect(() => {
-        const getData = async () => {
-            const response = await axios.get(`http://localhost:3001/api/categories/1`)
-            setBed(response.data.products)
-            console.log(response.data.products)
-            // const reviewResponse = await axios.get(`http://localhost:3001/api/products/reviews`)
-            // setReview(reviewResponse.data[0])
-            // console.log(reviewResponse.data)
-            // console.log(reviewResponse.data[0].reviews[0].comment)
-        }
-        getData()
-    }, [])
-
-    const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState([])
     useEffect(() => {
         const getData = async () => {
             const productResponse = await axios.get(`http://localhost:3001/api/products/reviews`)
@@ -36,12 +21,12 @@ const [review, setReview] = useState(null)
 
 
 
-    return bedroom && review ? (
+    return newArray ? (
         <div className="container">
             <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
 
             <div className="product-container">  
-                {bedroom.map((products) =>(
+                {newArray.map((products) =>(
                     <div className="product-card" key={products.name}>
                         <h3 className="productline1"> {products.name}</h3>
                         <h2 className="price">${products.price}</h2>
@@ -50,8 +35,8 @@ const [review, setReview] = useState(null)
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
                         <h6>REVIEWS</h6>
-                        <p className="review-text"> People who purchased this product rate it a {review.reviews[0].rating} out of 5!</p>
-                        <p className="review-text">{review.reviews[0].comment} </p>
+                        <p className="review-text"> People who purchased this product rate it a {products.reviews[0].rating} out of 5!</p>
+                        <p className="review-text">{products.reviews[0].comment} </p>
                         <div className="review-link">
                             <Link to="/Reviews" className="review-link"> Write a Review </Link>
                         </div>
