@@ -1,40 +1,42 @@
-import { useState } from "react";
-import { RegisterUser } from "../services/Auth";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import { RegisterUser } from '../services/Auth'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
-  let navigate = useNavigate();
+
+  let navigate = useNavigate()
 
   const [formValues, setFormValues] = useState({
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  })
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.id]: e.target.value });
-    console.log(formValues);
-  };
+    setFormValues({ ...formValues, [e.target.id]: e.target.value })
+    console.log(formValues)
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     await RegisterUser({
       username: formValues.username,
       email: formValues.email,
-      password: formValues.password,
-    });
+      password: formValues.password
+    })
 
     setFormValues({
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    })
 
-    navigate("/signin");
-  };
+    navigate('/signin')
+
+  }
 
   return (
     <div className="signin col">
@@ -95,7 +97,7 @@ const Register = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Register;
+export default Register

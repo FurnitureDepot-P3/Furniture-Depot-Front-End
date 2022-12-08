@@ -1,29 +1,31 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { SignInUser } from "../services/Auth";
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { SignInUser } from '../services/Auth'
 
 function SignIn(props) {
-  let navigate = useNavigate();
 
-  const [formValues, setFormValues] = useState({ email: "", password: "" });
+    let navigate = useNavigate()
 
-  const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.id]: e.target.value });
-    console.log(formValues);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const payload = await SignInUser(formValues);
-    setFormValues({ email: "", password: "" });
-    props.setUser(payload);
-    props.toggleAuthenticated(true);
-    navigate("/");
-  };
-
+    const [formValues, setFormValues] = useState({ email: '', password: '' })
+  
+    const handleChange = (e) => {
+      setFormValues({ ...formValues, [e.target.id]: e.target.value })
+      console.log(formValues)
+    }
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      const payload = await SignInUser(formValues)
+      setFormValues({ email: '', password: '' })
+      props.setUser(payload)
+      props.toggleAuthenticated(true)
+      navigate('/')
+    }
+    
   return (
     <div className="signin col">
+      
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
@@ -53,7 +55,7 @@ function SignIn(props) {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default SignIn;
+export default SignIn
