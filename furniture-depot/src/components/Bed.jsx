@@ -23,7 +23,9 @@ export default function Bed () {
 
     return newArray ? (
         <div className="container">
-            <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
+            <div className="back-btn-div">
+                <Link to="/" className="back-btn" id="home-btn"> ◁ Home </Link>
+            </div>
 
             <div className="product-container">  
                 {newArray.map((products) =>(

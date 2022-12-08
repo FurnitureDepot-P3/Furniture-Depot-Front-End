@@ -27,6 +27,28 @@
 a {
   font-family: 'Nunito', sans-serif;
 }
+
+.back-btn-div {
+  display: flex;
+  align-items: left;
+  margin-left: 20px;
+  padding-left: 10px;
+
+}
+
+.back-btn {
+  text-decoration: none;
+  font-size: 14px;
+  color: #B1A9A2;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -50,16 +72,6 @@ a {
   justify-content: space-around;
   align-items: center;
 }
-
-/* .homecats {
-  
-} */
-
-/* #containerhdr {
-  display: flex;
-  justify-content: space-around;
-
-} */
 
 h6 {
   color: #B1A9A2;
