@@ -16,7 +16,7 @@ const UpdateReview = ({myReviews}) => {
     return (
         <div className="edit-button">
             <button onClick={updateReview}>
-                EDIT
+                UPDATE
             </button>
         </div>
     )
