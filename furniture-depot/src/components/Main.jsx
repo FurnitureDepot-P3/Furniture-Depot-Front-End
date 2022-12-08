@@ -11,6 +11,7 @@ import React from 'react';
 import SearchForm from "./SearchForm"
 import SignIn from './SignIn'
 import Register from './Register'
+import UserProfile from './UserProfile'
 import { useState, useEffect } from 'react'
 import { CheckSession } from '../services/Auth'
 
@@ -61,6 +62,7 @@ export default function Main () {
                 toggleAuthenticated={toggleAuthenticated}
                 />} />
                 <Route path="/Register" element={<Register />} />
+                <Route path="/UserProfile" element={<UserProfile />} />
             </Routes>
         </div>
 
