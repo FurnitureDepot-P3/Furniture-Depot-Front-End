@@ -32,6 +32,7 @@ export default function Living () {
                         <h3 className="productline1"> {products.name}</h3>
                         <h2 className="price">${products.price}</h2>
                         <p>In stock. Ships today.</p>
+                        <button>add to cart</button>
                         <img src={products.image} alt="#" />
                         <h6>DESCRIPTION</h6>
                         <p>{products.description}</p>
