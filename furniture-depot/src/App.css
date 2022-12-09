@@ -3,16 +3,6 @@
  font-family: 'Inknut Antiqua', serif;
 }
 
-/* .App-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-
-
-} */
-
 .App-footer {
   font-family: 'Inknut Antiqua', serif;
   background-color: #B1A9A2;
@@ -33,7 +23,6 @@ a {
   align-items: left;
   margin-left: 20px;
   padding-left: 10px;
-
 }
 
 .back-btn {
@@ -149,7 +138,6 @@ p {
 
 .review-link {
   border-top: 1px solid #B1A9A2;
-  border-bottom: 1px solid #B1A9A2;
   text-decoration: none;
   color: #B1A9A2;
   display: block;
@@ -168,15 +156,13 @@ p {
 
 .review-lnk:hover {
   text-decoration: underline;
-  color: #B1A9A2;
-  
+  color: #B1A9A2; 
 }
 
 .product-card p {
   padding-bottom: 15px;
 }
 
-/* padding is changing row size */
 .livingbtn {
   font-family: 'Inknut Antiqua', serif;
   border-style: none;
@@ -188,8 +174,6 @@ p {
   background-position: bottom;
 }
 
-
-/* padding is changing row size */
 .bedbtn {
   font-family: 'Inknut Antiqua', serif;
   border-style: none;
@@ -223,7 +207,6 @@ p {
 
 th, td {
   border-bottom: 1px solid #B1A9A2;
-  /* border-collapse: collapse; */
 }
 
 .table-comment {

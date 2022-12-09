@@ -1,5 +1,4 @@
 import DeleteReview from "./DeleteReview"
-import UpdateForm from "./UpdateForm";
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react";
@@ -37,11 +36,11 @@ export default function UserProfile () {
 
                 <tbody>
                 {profile.map((myReviews) =>(
-                    <tr className="table-rows">
+                    <tr className="table-rows" key={myReviews.id}>
                         <td>{myReviews.product_id}</td>
                         <td>{myReviews.rating}</td>
                         <td className="table-comment"> {myReviews.comment}</td>
-                        <td><button><Link to="/UpdateForm" myReviews={myReviews}> EDIT </Link></button></td>
+                        <td><button><Link to="/UpdateForm" state={{review: myReviews}}> EDIT </Link></button></td>
                         <td><DeleteReview myReviews={myReviews}/></td>
                     </tr>
                 ))}

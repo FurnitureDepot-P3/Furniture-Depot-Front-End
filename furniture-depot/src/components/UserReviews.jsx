@@ -35,7 +35,7 @@ export default function Reviews() {
 
     return(
         <div className="wrapper">
-            <h1>Post a Review!</h1>
+            <h2>Post a Review!</h2>
             <form onSubmit={handleSubmit}>
                 <fieldset disable={"false"}>
                     <label htmlFor='name'>

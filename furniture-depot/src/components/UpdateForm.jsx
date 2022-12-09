@@ -1,31 +1,16 @@
-import UpdateReview from "./UpdateReview"
+import { useLocation } from 'react-router-dom'
 import {useState} from "react" 
 import axios from "axios";
 
-export default function UpdateForm({myReviews}) {
-    // console.log({myReviews})
-    // console.log(`${myReviews.id}`)
+export default function UpdateForm () {
 
-    // const initialState = {
-    //     reviewId: `${myReviews.id}`,
-    //     productId: `${myReviews.product_id}`,
-    //     rating: `${myReviews.rating}`,
-    //     comments: `${myReviews.comments}`
-    // }
-    // const [formState, setFormState] = useState(initialState)
-
-    // const handleChange = (event) => {
-    //     setFormState({ ...formState, [event.target.id]: event.target.value })
-    // }
-
-/// 
-
+    let location = useLocation()
+    let review = location.state.review
+    console.log(review)
+    
 const initialState = {
-    name: "",
-    userId: "",
-    productId: "",
-    rating: "",
-    comments: "",
+    rating: review.rating,
+    comment: review.comment,
   };
 const [formState, setFormState] = useState(initialState);
 
@@ -37,35 +22,25 @@ const [formState, setFormState] = useState(initialState);
     event.preventDefault();
     console.log(formState);
     setFormState(initialState);
-    const updateReview = async () => {
-        const response = await axios.put(`http://localhost:3001/api/reviews/${myReviews.id}`, updateReview, {
-             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${localStorage.getItem("token")}`
-            }
-        })
-    console.log("updated successfully")
-    console.log(response.status)
-}
+    const updateReview = {
+        rating: formState.rating,
+        comment: formState.comment
+    }
+    axios.put(`http://localhost:3001/api/reviews/${review.id}`, updateReview).then((response) => {
+        console.log("updated successfully")
+        console.log(response.status)
+        console.log(response.data.json)
+        console.log(response.data.headers)
+
+    })
+    }       
 
     return (
         
         <div className="wrapper">
-            <h1>Update your Review</h1>
+            <h2>Update your Review</h2>
             <form onSubmit={handleSubmit}>
                 <fieldset disable={"false"}>
-                    <label htmlFor='name'>
-                        <p>Name</p>
-                        <input id="name" type="text" onChange={handleChange} value={formState.name }/>
-                    </label>
-                    <label htmlFor='userId'>
-                        <p>User ID</p>
-                        <input id="userId" type="text" onChange={handleChange} value={formState.userId }/>
-                    </label>
-                    <label htmlFor='productId'>
-                        <p>Product ID</p>
-                        <input id="productId" type="text" onChange={handleChange} value={formState.productId }/>
-                    </label>
                     <label htmlFor='rating'>
                         <p>Rating(Couch Potatoes)</p>
                         <select id="rating" onChange={handleChange} value={formState.rating} >
@@ -79,7 +54,7 @@ const [formState, setFormState] = useState(initialState);
                     </label>
                     <label htmlFor="comments">
                         <p>Comments</p>
-                    <input id="comments" type="text" maxlength="255" onChange={handleChange} value={formState.comments}></input>
+                    <input id="comment" type="text" maxlength="255" onChange={handleChange} value={formState.comment}></input>
                     </label>
                 </fieldset>
                 <button type="submit">Update</button>
@@ -88,6 +63,5 @@ const [formState, setFormState] = useState(initialState);
         </div>
         
     )
-}
-
+    
 }
